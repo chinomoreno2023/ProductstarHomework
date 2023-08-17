@@ -9,6 +9,10 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
     compile "org.springframework:spring-jdbc:5.3.3"
     compile "org.springframework:spring-context:5.3.3"

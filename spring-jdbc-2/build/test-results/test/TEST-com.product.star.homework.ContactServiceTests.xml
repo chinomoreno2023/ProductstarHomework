@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.product.star.homework.ContactServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-08-17T20:58:38" hostname="DESKTOP-A9C5UGQ" time="0.478">
+  <properties/>
+  <testcase name="saveContacts()" classname="com.product.star.homework.ContactServiceTests" time="0.478"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Aug 17, 2023 11:58:38 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFO: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+Aug 17, 2023 11:58:38 PM org.springframework.test.context.support.AbstractTestContextBootstrapper getTestExecutionListeners
+INFO: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1f267580, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@19d973cd, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4d3f17cf, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3c931531, org.springframework.test.context.transaction.TransactionalTestExecutionListener@10b5ed56, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4220a396, org.springframework.test.context.event.EventPublishingTestExecutionListener@77944572]
+]]></system-err>
+</testsuite>

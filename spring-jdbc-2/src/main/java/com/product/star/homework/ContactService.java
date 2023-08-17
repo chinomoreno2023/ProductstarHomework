@@ -14,7 +14,7 @@ public class ContactService {
     }
 
     public void saveContacts(Path filePath) {
-        var contacts = contactReader.readFromFile(filePath);
+        var contacts = contactReader.readFromFile1(filePath);
         contactDao.saveAll(contacts);
     }
 
