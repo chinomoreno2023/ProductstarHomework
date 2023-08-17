@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/spring-basics" />
+            <option value="$PROJECT_DIR$/spring-context" />
+            <option value="$PROJECT_DIR$/spring-data" />
+            <option value="$PROJECT_DIR$/spring-hibernate" />
+            <option value="$PROJECT_DIR$/spring-jdbc" />
+            <option value="$PROJECT_DIR$/spring-jdbc-2" />
+            <option value="$PROJECT_DIR$/spring-rest" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

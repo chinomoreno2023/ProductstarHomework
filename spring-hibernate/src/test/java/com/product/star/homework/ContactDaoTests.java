@@ -19,7 +19,10 @@ import java.util.List;
  */
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = ContactConfiguration.class)
-public record ContactDaoTests(@Autowired ContactDao contactDao) {
+public class ContactDaoTests {
+
+    @Autowired
+    ContactDao contactDao;
 
     private static final Contact IVAN = new Contact(
             "Ivan", "Ivanov", "iivanov@gmail.com", "1234567"
@@ -81,7 +84,7 @@ public record ContactDaoTests(@Autowired ContactDao contactDao) {
         var contactId = contactDao.addContact(contact);
 
         var newPhone = "777-77-77";
-        contactDao.updatePhone(contactId, newPhone);
+//        contactDao.updatePhone(contactId, newPhone);
 
         var updatedContact = contactDao.getContact(contactId);
         assertThat(updatedContact.getPhone()).isEqualTo(newPhone);

@@ -24,7 +24,8 @@ import java.util.List;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = ContactConfiguration.class)
 @Sql("classpath:contact.sql")
-public record ContactDaoTests(@Autowired ContactDao contactDao) {
+public class ContactDaoTests {
+    private final ContactDao contactDao;
 
     private static final Contact IVAN = new Contact(
             1000L, "Ivan", "Ivanov", "iivanov@gmail.com", "1234567"
@@ -38,6 +39,11 @@ public record ContactDaoTests(@Autowired ContactDao contactDao) {
      * There are two contacts inserted in the database in contact.sql.
      */
     private static final List<Contact> PERSISTED_CONTACTS = List.of(IVAN, MARIA);
+
+    @Autowired
+    public ContactDaoTests(ContactDao contactDao) {
+        this.contactDao = contactDao;
+    }
 
     @Test
     void addContact() {
