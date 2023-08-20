@@ -84,7 +84,7 @@ public class ContactDaoTests {
         var contactId = contactDao.addContact(contact);
 
         var newPhone = "777-77-77";
-//        contactDao.updatePhone(contactId, newPhone);
+        contactDao.updatePhoneNumber(contactId, newPhone);
 
         var updatedContact = contactDao.getContact(contactId);
         assertThat(updatedContact.getPhone()).isEqualTo(newPhone);
