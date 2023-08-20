@@ -42,9 +42,11 @@ public class ContactDao {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Contact contact = session.get(Contact.class, contactId);
-            contact.setPhone(phoneNumber);
-            session.update(contact);
-            session.getTransaction().commit();
+            if (contact != null) {
+                contact.setPhone(phoneNumber);
+                session.update(contact);
+                session.getTransaction().commit();
+            }
         }
     }
 
@@ -52,9 +54,11 @@ public class ContactDao {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Contact contact = session.get(Contact.class, contactId);
-            contact.setEmail(email);
-            session.update(contact);
-            session.getTransaction().commit();
+            if (contact != null) {
+                contact.setEmail(email);
+                session.update(contact);
+                session.getTransaction().commit();
+            }
         }
     }
 
@@ -62,9 +66,10 @@ public class ContactDao {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             Contact contact = session.get(Contact.class, contactId);
-            if (contact != null)
+            if (contact != null) {
                 session.delete(contact);
-            session.getTransaction().commit();
+                session.getTransaction().commit();
+            }
         }
     }
 }
