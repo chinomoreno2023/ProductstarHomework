@@ -32,9 +32,9 @@ public class ContactDao {
     public long addContact(Contact contact) {
         try (Session session = sessionFactory.openSession()) {
             session.beginTransaction();
-            session.save(contact);
+            long contactId = (long) session.save(contact);
             session.getTransaction().commit();
-            return contact.getId();
+            return contactId;
         }
     }
 
