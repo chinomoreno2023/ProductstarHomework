@@ -1,19 +1,21 @@
-import com.product.star.Main;
+import com.product.star.ApplicationConfiguration;;
 import com.product.star.homework.Contact;
 import com.product.star.homework.ContactRepository;
+import org.aspectj.lang.annotation.After;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
-
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.List;
 
-@SpringBootTest(classes = Main.class)
+@SpringBootTest
 @Sql("classpath:contact.sql")
+@ContextConfiguration(classes = ApplicationConfiguration.class)
 public class ContactRepositoryTests {
-
     private final ContactRepository contactRepository;
 
     @Autowired
@@ -33,6 +35,12 @@ public class ContactRepositoryTests {
      * There are two contacts inserted in the database in contact.sql.
      */
     private static final List<Contact> PERSISTED_CONTACTS = List.of(IVAN, MARIA);
+
+
+    @AfterEach
+    public void persistData() {
+        contactRepository.deleteAll();
+    }
 
     @Test
     void addContact() {
